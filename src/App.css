@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+* {
+  outline: none;
+}
+
+.App-header {
+  background-color: rgb(163, 132, 216);
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.h2 {
+  padding-top: 10px;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  color: forestgreen;
+  border-bottom: 1px solid #eee;
+}
+
+.result {
+  color: #999;
+}
+
+.search-input {
+  position: relative;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+  font-size: 20px;
+  border: 1px solid #b4b7c1;
+  color: #333;
+  /*box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);*/
+  box-shadow: none;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dotting {
+  display: inline-block;
+  width: 10px;
+  min-height: 2px;
+  padding-right: 2px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  background-color: currentColor;
+  background-clip: content-box;
+  box-sizing: border-box;
+  animation: dot 4s infinite step-start both;
+  /**zoom: expression(this.innerHTML='...');*/
+}
+
+.dotting:before {
+  content: '...';
+}
+
+
+/* IE8 */
+
+.dotting::before {
+  content: '';
+}
+
+:root .dotting {
+  margin-left: 2px;
+  padding-left: 2px;
+}
+
+
+/* IE9+ */
+
+@keyframes dot {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  /* 0个点 */
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+  /* 1个点 */
+  75% {
+    border-right-color: transparent;
+  }
+  /* 2个点 */
+}
+
+.error-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.error-text {
+  color: #aaa;
+}
+
+.error-icon {
+  width: 60px;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,10 @@
+export const URLREGEXP = /^(http|ftp|https):\/\/[\w\-_]+(.[\w\-_]+)+([\w\-.,@?^=%&amp;:/~+#]*[\w\-@?^=%&amp;/~+#])?$/
+
+export const isUrl = text => URLREGEXP.test(text)
+
+export const isChinese = temp => {
+  if (/.*[\u4e00-\u9fa5]+.*$/.test(temp)) {
+    return true
+  }
+  return false
+}
