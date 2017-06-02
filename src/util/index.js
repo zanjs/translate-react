@@ -8,3 +8,7 @@ export const isChinese = temp => {
   }
   return false
 }
+
+export const isAllChinese = temp => {
+  return /^[\u4E00-\u9FA5]+$/.test(temp)
+}

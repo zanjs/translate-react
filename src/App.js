@@ -5,7 +5,8 @@ import Header from './components/Header';
 import Textarea from './components/Textarea';
 import TransResult from './components/TransResult';
 import Error from './components/Error';
-import {isChinese} from './util/index';
+import {isAllChinese} from './util/index';
+// import {Host} from './config/index'
 import './App.css';
 
 
@@ -34,7 +35,7 @@ class App extends Component {
       return
     }
 
-    if(isChinese(val)){
+    if(isAllChinese(val)){
 
       that.setState({
         error:true,
@@ -50,14 +51,14 @@ class App extends Component {
       errorMsg:"",
     })
 
-    axios.post('http://192.168.1.184:8700/api/translate/text',{
+    axios.post(`/api/translate/text`,{
       text: val,
     })
     .then(function(response) {
      
       let data = response.data
        console.log(data);
-       
+       JSON.stringify(data)
        that.setState({ 
          transResult: data.text ,
          transResultLang: data.from.language.iso,

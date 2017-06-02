@@ -9,9 +9,9 @@ export default class Header extends Component {
         <div className="App">
             <div className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h2>皮皮球翻译 
+            <div className="logo-name">皮皮球翻译 
                 <span className={isLoading}></span>
-                </h2>
+                </div>
             </div>
         </div>
         )
