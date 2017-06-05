@@ -3,12 +3,12 @@ export const URLREGEXP = /^(http|ftp|https):\/\/[\w\-_]+(.[\w\-_]+)+([\w\-.,@?^=
 export const isUrl = text => URLREGEXP.test(text)
 
 export const isChinese = temp => {
-  if (/.*[\u4e00-\u9fa5]+.*$/.test(temp)) {
+  if (/.*[\u4e00-\u9fa5]+.*$/.test(temp.replace(/(^\s*)|(\s*$)/g, ''))) {
     return true
   }
   return false
 }
 
 export const isAllChinese = temp => {
-  return /^[\u4E00-\u9FA5]+$/.test(temp)
+  return /^[\u4E00-\u9FA5]+$/.test(temp.replace(/(^\s*)|(\s*$)/g, ''))
 }
