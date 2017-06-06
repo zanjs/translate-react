@@ -23,7 +23,7 @@ export default class Textarea extends Component {
         if(isUrl(this.state.text) && /\n$/.test(input.value) ) return
         this.setState({
             text: input.value,
-            height: input.scrollHeight
+            height: input.scrollHeight+10
         })
 
         if(isUrl(this.state.text)) return
