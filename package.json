@@ -1,11 +1,14 @@
 {
   "name": "translate-react",
-  "version": "0.1.0",
+  "version": "0.0.3",
   "private": true,
   "dependencies": {
     "axios": "^0.16.1",
+    "prop-types": "^15.5.10",
     "proptypes": "^1.0.0",
+    "rc-tween-one": "^1.2.5",
     "react": "^15.5.4",
+    "react-anime": "^0.3.4",
     "react-dom": "^15.5.4",
     "react-particles-js": "^1.5.0"
   },
