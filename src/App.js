@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Particles from 'react-particles-js';
 
 import Header from './components/Header';
 import Textarea from './components/Textarea';
 import TransResult from './components/TransResult';
 import Error from './components/Error';
+import Footer from './components/Footer';
 import {isAllChinese} from './util/index';
 // import {Host} from './config/index'
 import './App.css';
@@ -77,11 +79,22 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
+        <Particles
+          style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              zIndex:-1,
+              width: "100%",
+              height: "100%"
+          }}
+         />
         <Header loading={this.state.loading}/>
         <Textarea changeVal={this.changeVal} />
         <TransResult result={this.state.transResult} lang={this.state.transResultLang} />
         <Error error={this.state.error} errorMsg={this.state.errorMsg} />
+        <Footer />
       </div>
     );
   }
