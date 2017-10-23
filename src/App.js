@@ -59,11 +59,11 @@ class App extends Component {
     .then(function(response) {
      
       let data = response.data
-       console.log(data);
+       console.log(data)
        JSON.stringify(data)
        that.setState({ 
-         transResult: data.text ,
-         transResultLang: data.from.language.iso,
+         transResult: data.result[0] ,
+         transResultLang: data.from,
          loading:false
         })
 

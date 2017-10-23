@@ -56,7 +56,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "--proxy": {
-    "/api": "http://192.168.1.184:8700"
+    "/api": "http://localhost:8700"
   },
   "jest": {
     "collectCoverageFrom": [
